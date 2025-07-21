@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+
+# Lint-staged formats only staged files
+
+npx lint-staged
+
+# Stage newly formatted files
+
+git add .
+
+# Additional checks
+
+bun run lint:type
+bun run lint:eslint
+bun run lint:prettier
+bun run lint:stylelint
+
+# Duplicate code check
