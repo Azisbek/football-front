@@ -23,15 +23,15 @@
   },
   "include": ["vite.config.ts"],
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prettier": "prettier --write .",
+    "lint:type": "tsc --noEmit",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier --check .",
+    "lint:stylelint": "stylelint \"**/*.{css,scss}\""
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{css,scss,md}": [
-      "prettier --write"
-    ]
+    "*.{js,jsx,ts,tsx}": ["eslint --fix", "prettier --write"],
+    "*.{css,scss,md}": ["prettier --write"]
   }
 }
