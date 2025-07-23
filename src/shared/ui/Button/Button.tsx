@@ -5,10 +5,20 @@ import s from "./Button.module.scss";
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
+  variant: "lime" | "gray" | "primary" | "transparent" | "white";
 }
 
-export const Button = ({ className, children, ...resProps }: ButtonProps) => (
-  <button type="button" className={clsx(s.button, className)} {...resProps}>
+export const Button = ({
+  className,
+  variant,
+  children,
+  ...resProps
+}: ButtonProps) => (
+  <button
+    type="button"
+    className={clsx(s.button, s[variant], className)}
+    {...resProps}
+  >
     {children}
   </button>
 );

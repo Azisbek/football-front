@@ -1,0 +1,62 @@
+.fieldCard {
+  max-width: 372px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: rgb(255, 255, 255);
+  border-radius: 30px;
+
+  .container {
+    .image {
+      width: 100%;
+      height: 255px;
+      object-fit: cover;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 23.5px;
+    padding: 16px 20px;
+
+    .head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .title {
+        font-family: "Gilroy";
+        font-size: 28px;
+        font-weight: 400;
+      }
+
+      .price {
+        color: rgb(255, 255, 255);
+        font-family: "Gilroy";
+        font-size: 20px;
+        font-weight: 400;
+        border-radius: 20px;
+        background: rgb(32, 32, 32);
+        padding: 8px 16px;
+      }
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+    }
+
+    .foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .btn {
+        padding: 10px 20px;
+      }
+    }
+  }
+}

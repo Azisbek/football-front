@@ -1,0 +1,74 @@
+.bannerItem {
+  position: relative;
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+
+  .image {
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+  }
+
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 100px 20px 90px 96px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+      flex-grow: 1;
+
+      .title {
+        color: rgb(255, 255, 255);
+        font-family: "Gilroy";
+        font-size: 67px;
+        font-weight: 700;
+        line-height: 83px;
+        max-width: 800px;
+      }
+
+      .subTitle {
+        color: rgb(255, 255, 255);
+        font-family: "Gilroy";
+        font-size: 36px;
+        font-weight: 700;
+      }
+    }
+
+    .btn {
+      margin-top: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .image {
+      height: 350px;
+    }
+
+    .content {
+      padding: 40px 20px;
+
+      .column {
+        .title {
+          font-size: 28px;
+          line-height: 38px;
+          max-width: 100%;
+        }
+
+        .subTitle {
+          font-size: 18px;
+        }
+      }
+
+      .btn {
+        margin-top: 20px;
+      }
+    }
+  }
+}

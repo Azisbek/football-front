@@ -1,0 +1,59 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  font-family: "Gilroy";
+  font-size: 20px;
+  font-weight: 500;
+  padding: 15px 30px;
+  cursor: pointer;
+  width: max-content;
+  transition: background-color 0.3s ease-in;
+}
+
+.lime {
+  background-color: rgb(41, 191, 18);
+
+  &:hover {
+    background-color: rgb(35, 168, 15);
+  }
+}
+
+.gray {
+  background: rgb(130, 130, 130);
+
+  &:hover {
+    background: rgb(100, 100, 100);
+  }
+}
+
+.primary {
+  background: rgb(16, 69, 29);
+
+  &:hover {
+    background: rgb(20, 90, 38);
+  }
+}
+
+.transparent {
+  color: rgb(32, 32, 32);
+  border: 2px solid rgb(16, 69, 29);
+  background-color: transparent;
+
+  &:hover {
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+.white {
+  color: rgb(32, 32, 32);
+  background: rgb(255, 255, 255);
+
+  &:hover {
+    background: rgb(240, 240, 240);
+  }
+}
