@@ -1,0 +1,9 @@
+# Формат: <путь> @владелец1 @владелец2
+
+-                     @your-github-username
+  app/** @your-github-username
+  pages/** @your-github-username
+  widgets/** @your-github-username
+  feature/** @your-github-username
+  entities/** @your-github-username
+  shared/** @your-github-username
