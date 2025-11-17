@@ -1,34 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap";
+
 @font-face {
-  font-family: "Gilroy";
+  font-family: Gilroy, sans-serif;
   src: url("src/shared/assets/fonts/Girloy/Gilroy-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gilroy";
+  font-family: Gilroy, sans-serif;
   src: url("src/shared/assets/fonts/Girloy/Gilroy-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gilroy";
+  font-family: Gilroy, sans-serif;
   src: url("src/shared/assets/fonts/Girloy/Gilroy-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Benzin";
+  font-family: Benzin, sans-serif;
   src: url("src/shared/assets/fonts/Benzin-Semibold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Benzin";
+  font-family: Benzin, sans-serif;
   src: url("src/shared/assets/fonts/Benzin-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
