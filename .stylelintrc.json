@@ -1,3 +1,9 @@
 {
-  "extends": "stylelint-config-standard-scss"
+  "extends": "stylelint-config-standard-scss",
+  "rules": {
+    "selector-class-pattern": null,
+    "font-family-no-missing-generic-family-keyword": null,
+    "font-family-name-quotes": null,
+    "media-feature-range-notation": null
+  }
 }
