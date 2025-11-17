@@ -4,11 +4,14 @@ import { ROUTE } from "@/shared/constant/path";
 import { useState } from "react";
 import clsx from "clsx";
 import { Avatar } from "@/entities/avatar/ui/Avatar";
+import { useLockBodyScroll } from "@/shared/hooks/useLockBodyScroll";
+import { ClickOutside } from "@/shared/ui/ClickOutside/ClickOutside";
 
 export function HeaderMobile() {
   const [isMenu, setIsMenu] = useState(false);
 
   const toggleMenu = () => setIsMenu((prev) => !prev);
+  useLockBodyScroll(isMenu);
 
   return (
     <div className={s.headerWrapper}>
@@ -26,23 +29,31 @@ export function HeaderMobile() {
           <span className={s.line}></span>
         </div>
 
-        {isMenu && (
-          <div className={s.menu}>
-            <Avatar size={200} />
+        <div className={clsx(s.menu, isMenu && s.open)}>
+          <ClickOutside onClickOutside={() => setIsMenu(false)}>
+            <div className={s.content}>
+              <button className={s.closeBtn} onClick={toggleMenu}>
+                ✕
+              </button>
 
-            <nav className={s.nav}>
-              <Link to="#" className={s.link}>
-                Главная
-              </Link>
-              <Link to="#" className={s.link}>
-                Поля
-              </Link>
-              <Link to="#" className={s.link}>
-                О нас
-              </Link>
-            </nav>
-          </div>
-        )}
+              <div className={s.avatarBox}>
+                <Avatar size={140} />
+              </div>
+
+              <nav className={s.nav}>
+                <Link to="#" className={s.link}>
+                  Главная
+                </Link>
+                <Link to="#" className={s.link}>
+                  Поля
+                </Link>
+                <Link to="#" className={s.link}>
+                  О нас
+                </Link>
+              </nav>
+            </div>
+          </ClickOutside>
+        </div>
       </header>
     </div>
   );

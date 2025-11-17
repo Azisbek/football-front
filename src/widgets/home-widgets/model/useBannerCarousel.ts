@@ -8,21 +8,28 @@ interface Props {
 
 export function useBannerCarousel({ duration, data }: Props) {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [pauseCounter, setPauseCounter] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
+  const isTouching = useRef(false);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
+    isTouching.current = true;
+    setPauseCounter(true);
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isTouching.current) return;
     touchEndX.current = e.touches[0].clientX;
   };
 
   const handleTouchEnd = () => {
-    const distance = touchStartX.current - touchEndX.current;
+    isTouching.current = false;
+    setPauseCounter(false);
 
+    const distance = touchStartX.current - touchEndX.current;
     if (Math.abs(distance) > 50) {
       if (distance > 0 && currentSlide < data.length - 1) {
         setCurrentSlide((prev) => prev + 1);
@@ -44,11 +51,17 @@ export function useBannerCarousel({ duration, data }: Props) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % data.length);
+      setCurrentSlide((prev) => {
+        if (pauseCounter) {
+          return 0;
+        }
+
+        return (prev + 1) % data.length;
+      });
     }, duration ?? 3000);
 
     return () => clearInterval(interval);
-  }, [data.length, duration]);
+  }, [data.length, duration, pauseCounter]);
 
   useEffect(() => {
     const container = containerRef.current;
