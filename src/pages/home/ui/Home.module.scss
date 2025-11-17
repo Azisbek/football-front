@@ -14,20 +14,18 @@
         font-weight: 700;
       }
     }
-  }
 
-  @media (max-width: 768px) {
-    .nearestField {
+    @media (max-width: 768px) {
+      padding: 30px 0;
+
       .container {
         .title {
           font-size: 24px;
         }
       }
     }
-  }
 
-  @media (max-width: 538px) {
-    .nearestField {
+    @media (max-width: 538px) {
       .container {
         .title {
           font-size: 20px;
@@ -39,10 +37,8 @@
         }
       }
     }
-  }
 
-  @media (max-width: 408px) {
-    .nearestField {
+    @media (max-width: 408px) {
       .container {
         flex-direction: column;
         gap: 10px;
