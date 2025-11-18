@@ -1,18 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import { $api } from "@/shared/api/api";
-
 import { screenSlice } from "./screen.slice";
 
 export const store = configureStore({
   reducer: {
-    [$api.reducerPath]: $api.reducer,
     [screenSlice.name]: screenSlice.reducer,
   },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-      serializableCheck: false,
-    }).concat($api.middleware),
+  // middleware: (getDefaultMiddleware) =>
+  //   getDefaultMiddleware({
+  //     serializableCheck: false,
+  //   }).concat($api.middleware),
   devTools: true,
 });
 
