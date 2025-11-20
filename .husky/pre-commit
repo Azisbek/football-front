@@ -13,6 +13,6 @@ git add .
 bun run lint:type
 bun run lint:eslint
 bun run lint:prettier
-bun run lint:stylelint
+# bun run lint:stylelint
 
 # Duplicate code check

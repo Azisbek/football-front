@@ -1,0 +1,44 @@
+.header {
+  background-color: #fff;
+  padding: 25px 0;
+
+  // position: sticky;
+  // top: 0;
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      color: rgb(16, 69, 29);
+      font-family: "Gilroy";
+      font-size: 40px;
+      font-weight: 700;
+    }
+
+    .nav {
+      display: flex;
+      gap: 73px;
+
+      .link {
+        color: rgb(32, 32, 32);
+        font-family: "Gilroy";
+        font-size: 24px;
+        font-weight: 500;
+
+        &:hover {
+          color: rgb(16, 69, 29);
+          transition: color 0.3s ease;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}

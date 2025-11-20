@@ -1,0 +1,129 @@
+.headerWrapper {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.headerMobile {
+  position: relative;
+  background-color: #fff;
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    color: rgb(16, 69, 29);
+    font-family: "Gilroy";
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    cursor: pointer;
+
+    .line {
+      width: 34px;
+      height: 5px;
+      background-color: rgb(16, 69, 29);
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    &.active {
+      .line:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 5px);
+      }
+
+      .line:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+
+      .line:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -5px);
+      }
+    }
+  }
+
+  .menu {
+    position: fixed;
+    inset: 0;
+    background: rgb(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+
+  .open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .content {
+    position: relative;
+    background: #fff;
+    width: 100%;
+    height: 70vh;
+    padding: 40px 0 60px;
+    border-radius: 24px 24px 0 0;
+    box-shadow: 0 -10px 30px rgb(0, 0, 0, 0.08);
+    transform: translateY(100%);
+    transition: transform 0.35s ease;
+  }
+
+  .open .content {
+    transform: translateY(0);
+  }
+
+  .closeBtn {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #222;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .avatarBox {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-top: 20px;
+  }
+
+  .link {
+    font-family: "Gilroy";
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(32, 32, 32);
+    transition: color 0.25s ease;
+
+    &:hover {
+      color: rgb(16, 69, 29);
+    }
+  }
+}

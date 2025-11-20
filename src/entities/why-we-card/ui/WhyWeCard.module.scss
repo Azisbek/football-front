@@ -1,0 +1,40 @@
+.card {
+  position: relative;
+  max-width: 590.5px;
+  width: 100%;
+  height: 210px;
+  border-radius: 15px;
+  background: rgb(255, 255, 255);
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+
+  .title {
+    position: relative;
+    z-index: 2;
+    font-family: "Gilroy";
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .image {
+    position: absolute;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    height: 210px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgb(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    .image {
+      filter: blur(5px);
+    }
+  }
+}
