@@ -1,0 +1,58 @@
+.homeAbout {
+  display: flex;
+  gap: 24px;
+  padding: 80px 0;
+
+  .image {
+    width: 373px;
+    height: 373px;
+    border-radius: 30px;
+    object-fit: cover;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+
+    .title {
+      font-family: "Gilroy";
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .description {
+      font-family: "Gilroy";
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 30px 0;
+
+    .image {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+    }
+
+    .content {
+      .title {
+        font-size: 24px;
+      }
+
+      .description {
+        font-size: 18px;
+      }
+
+      .btn {
+        margin: 0 auto;
+      }
+    }
+  }
+}

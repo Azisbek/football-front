@@ -1,13 +1,18 @@
 import { RouterProvider } from "react-router";
 import { router } from "./router";
-import { Layout } from "@app/layout";
+import { Suspense } from "react";
+import { Provider } from "react-redux";
+import { store } from "../model/store";
 
 export function AppProviders() {
   return (
     <>
-      <Layout>
-        <RouterProvider router={router} />
-      </Layout>
+      <Provider store={store}>
+        <Suspense fallback={<div>Загрузка...</div>}>
+          <RouterProvider router={router} />
+        </Suspense>
+      </Provider>
+
       {/* <Modal /> */}
     </>
   );
