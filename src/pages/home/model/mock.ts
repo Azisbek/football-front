@@ -1,7 +1,7 @@
 export const mockData = [
   {
     id: "1",
-    image: "src/shared/assets/images/banner.png",
+    image: "/images/banner.png",
     title: "Забронируй футбольное поле за 2 минуты",
     subTitle: "Играй, где и когда удобно",
   },

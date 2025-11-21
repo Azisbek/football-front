@@ -9,7 +9,7 @@ export function HomeWhyWe() {
       <div className={s.container}>
         <WhyWeCard
           title="Мгновенное бронирование"
-          image="src/shared/assets/images/illustrations/image1.webp"
+          image="/images/illustrations/image1.webp"
           width={320}
           height={320}
           top={-20}
@@ -17,7 +17,7 @@ export function HomeWhyWe() {
         />{" "}
         <WhyWeCard
           title="Мгновенное бронирование"
-          image="src/shared/assets/images/illustrations/image2.webp"
+          image="/images/illustrations/image2.webp"
           width={290}
           height={290}
           top={-20}
@@ -25,7 +25,7 @@ export function HomeWhyWe() {
         />{" "}
         <WhyWeCard
           title="Мгновенное бронирование"
-          image="src/shared/assets/images/illustrations/image3.webp"
+          image="/images/illustrations/image3.webp"
           width={358}
           height={239}
           top={30}
@@ -33,7 +33,7 @@ export function HomeWhyWe() {
         />{" "}
         <WhyWeCard
           title="Мгновенное бронирование"
-          image="src/shared/assets/images/illustrations/image4.webp"
+          image="/images/illustrations/image4.webp"
           width={210}
           height={180}
           top={60}
