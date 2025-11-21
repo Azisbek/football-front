@@ -4,11 +4,7 @@ import s from "./HomeAbout.module.scss";
 export function HomeAbout() {
   return (
     <section className={s.homeAbout}>
-      <img
-        src="src/shared/assets/images/home-about.webp"
-        alt="about"
-        className={s.image}
-      />
+      <img src="/images/home-about.webp" alt="about" className={s.image} />
 
       <div className={s.content}>
         <h3 className={s.title}>О нас</h3>
