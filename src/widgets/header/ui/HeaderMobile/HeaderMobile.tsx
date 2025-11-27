@@ -40,14 +40,14 @@ export function HeaderMobile() {
                 <Avatar size={140} />
               </div>
 
-              <nav className={s.nav}>
-                <Link to="#" className={s.link}>
+              <nav className={s.nav} onClick={() => setIsMenu(false)}>
+                <Link to={ROUTE.base} className={s.link}>
                   Главная
                 </Link>
-                <Link to="#" className={s.link}>
+                <Link to={ROUTE.places} className={s.link}>
                   Поля
                 </Link>
-                <Link to="#" className={s.link}>
+                <Link to={ROUTE.about} className={s.link}>
                   О нас
                 </Link>
               </nav>

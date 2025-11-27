@@ -1,0 +1,82 @@
+.calendar {
+  padding: 6px;
+
+  .calendarHeader {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+      font-size: 20px;
+      font-weight: 500;
+      font-family: "Girloy", sans-serif;
+      color: #202020;
+    }
+
+    .btn {
+      background-color: transparent;
+    }
+  }
+
+  .hr {
+    color: #bdbdbd;
+    margin: 8px 0;
+  }
+
+  .weeks {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-family: "Girloy", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 10px;
+    align-items: center;
+
+    .day,
+    .inactive,
+    .selectedDay {
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .day {
+      color: #202020;
+
+      &:hover {
+        transform: scale(1.1);
+        background-color: #e0f0d9;
+      }
+    }
+
+    .inactive {
+      color: #828282;
+      pointer-events: none;
+
+      &:hover {
+        transform: none;
+        background-color: transparent;
+      }
+    }
+
+    .selectedDay {
+      background: #10451d;
+      color: white;
+
+      &:hover {
+        transform: scale(1.1);
+        background-color: #136622;
+      }
+    }
+  }
+}

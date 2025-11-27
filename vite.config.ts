@@ -9,7 +9,7 @@ export default defineConfig({
       "@": "/src",
       "@app": "/src/app",
       "@entities": "/src/entities",
-      "@feature": "/src/feature",
+      "@features": "/src/features",
       "@pages": "/src/pages",
       "@shared": "/src/shared",
       "@widgets": "/src/widgets",
