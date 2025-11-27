@@ -19,7 +19,10 @@ export function Avatar({ image, size, to }: Props) {
       style={{ width: size, height: size }}
     >
       <img
-        src={image ?? "src/shared/assets/icons/placeholders/avatar.webp"}
+        src={
+          image ??
+          "https://i.pinimg.com/1200x/f3/23/33/f323338233ea1ef3e83ad205919f7a3a.jpg"
+        }
         alt="avatar"
         className={s.img}
         width={size}

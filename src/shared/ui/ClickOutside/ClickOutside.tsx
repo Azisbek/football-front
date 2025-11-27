@@ -3,10 +3,9 @@ import { useEffect, useRef } from "react";
 interface Props {
   onClickOutside: () => void;
   children: React.ReactNode;
-  className?: string;
 }
 
-export function ClickOutside({ onClickOutside, className, children }: Props) {
+export function ClickOutside({ onClickOutside, children }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -20,9 +19,5 @@ export function ClickOutside({ onClickOutside, className, children }: Props) {
     return () => document.removeEventListener("mousedown", handleClick);
   }, [onClickOutside]);
 
-  return (
-    <div ref={ref} className={className}>
-      {children}
-    </div>
-  );
+  return <div ref={ref}>{children}</div>;
 }

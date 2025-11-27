@@ -1,0 +1,30 @@
+.rangeSlider {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background-color: #edeef1;
+  border-radius: 12px;
+
+  .range {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background-color: #10451d;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  .thumb {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background-color: #10451d;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    touch-action: none;
+  }
+}

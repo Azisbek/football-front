@@ -1,5 +1,5 @@
 import s from "./HomeBanner.module.scss";
-import { BannerItem } from "@/feature/banner-item";
+import { BannerItem } from "@/features/banner-item";
 import { GreaterThan } from "@/shared/assets/icons/ui/GreaterThan";
 import { useBannerCarousel } from "../../model/useBannerCarousel";
 import type { IBannerTypes } from "../../model/types";

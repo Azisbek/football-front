@@ -1,31 +1,30 @@
 interface Props {
   color?: string;
+  size?: number;
 }
 
-export const GeoIcon = ({ color }: Props) => {
+export const GeoIcon = ({ color, size = 24 }: Props) => {
   return (
     <svg
-      width="18.000000"
-      height="22.000000"
-      viewBox="0 0 18 22"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        id="Vector"
-        d="M17 9C17 4.58 13.41 1 9 1C4.58 1 1 4.58 1 9C1 13.41 5 17 9 21C13 17 17 13.41 17 9Z"
+        d="M12 22C16 18 20 14.4183 20 10C20 5.58172 16.4183 2 12 2C7.58172 2 4 5.58172 4 10C4 14.4183 8 18 12 22Z"
         stroke={color ?? "#202020"}
-        stroke-opacity="1.000000"
-        stroke-width="2.000000"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
-        id="Vector"
-        d="M12 9C12 7.34 10.65 6 9 6C7.34 6 6 7.34 6 9C6 10.65 7.34 12 9 12C10.65 12 12 10.65 12 9Z"
+        d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
         stroke={color ?? "#202020"}
-        stroke-opacity="1.000000"
-        stroke-width="2.000000"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

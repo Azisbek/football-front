@@ -1,0 +1,23 @@
+.customMenu {
+  position: absolute;
+  top: 180%;
+  left: -10%;
+  min-width: 290px;
+  padding: 10px;
+  background: white;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
